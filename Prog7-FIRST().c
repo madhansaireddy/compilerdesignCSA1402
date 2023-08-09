@@ -14,7 +14,7 @@ int main()
     char result[20];
     printf("How many number of productions ? :");
     scanf(" %d",&numOfProductions);
-    for(i=0;i<numOfProductions;i++)//read production string eg: E=E+T
+    for(i=0;i<numOfProductions;i++)
     {
         printf("Enter productions Number %d : ",i+1);
         scanf(" %s",productionSet[i]);
@@ -60,10 +60,6 @@ void FIRST(char* Result,char c)
         {
 //If X â†’ Îµ is a production, then add Îµ to FIRST(X).
  if(productionSet[i][2]=='$') addToResultSet(Result,'$');
-            //If X is a non-terminal, and X â†’ Y1 Y2 â€¦ Yk
-            //is a production, then add a to FIRST(X)
-            //if for some i, a is in FIRST(Yi),
-            //and Îµ is in all of FIRST(Y1), â€¦, FIRST(Yi-1).
       else
             {
                 j=2;
